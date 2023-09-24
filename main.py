@@ -62,3 +62,33 @@ while task_n == 1 or task_n == 2 or task_n == 3:
                                 print(f"Here is the bigger number: {num2_t2}. Do what you need with this information, Neo!")
                     except ValueError as e:
                         print("Error: Please enter only numbers!")
+                case 3:
+                    try:
+                        num1_t3 = float(input("Enter please first number: "))
+                        num2_t3 = float(input("Enter please second number: "))
+                        action_t3 = input("Select action, that you want to do with these number (+, -, * or /): ")
+
+                        match action_t3:
+                            case "+":
+                                print("Sum of two numbers: "+ str(num1_t3 + num2_t3))
+                            case "-":
+                                print("Subtraction of two numbers: " + str(num1_t3 - num2_t3))
+                            case "*":
+                                print("Multiplying of two numbers: " + str(num1_t3 * num2_t3))
+                            case "/":
+                                print("Dividing of two numbers: " + str(num1_t3 / num2_t3))
+                            case _:
+                                raise Exception("Please enter a valid action!")
+                    except ValueError as e:
+                        print("Error: Please enter only numbers!")
+                    except Exception as e:
+                        print(f"Error: {e}")
+                case 4:
+                    print("Thanks for your time!")
+                    break
+                case _:
+                    raise Exception("Please enter a valid task number!")
+    except ValueError as e:
+        print("Error: Please enter only integers!")
+    except Exception as e:
+        print(f"Error: {e}")
