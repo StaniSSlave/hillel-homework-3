@@ -48,3 +48,17 @@ while task_n == 1 or task_n == 2 or task_n == 3:
                         print("Error: Please enter only integers!")
                     except Exception as e:
                         print(f"Error: {e}")
+                case 2:
+                    try:
+                        num1_t2 = float(input("Enter please first number: "))
+                        num2_t2 = float(input("Enter please second number: "))
+
+                        if num1_t2 == num2_t2:
+                            print("Numbers are equal.")
+                        else:
+                            if num1_t2 > num2_t2:
+                                print(f"Here is the bigger number: {num1_t2}. Do what you need with this information, Neo!")
+                            else:
+                                print(f"Here is the bigger number: {num2_t2}. Do what you need with this information, Neo!")
+                    except ValueError as e:
+                        print("Error: Please enter only numbers!")
