@@ -13,10 +13,9 @@
 """
 task_n = 1
 
-while task_n !=4:
+while task_n == 1 or task_n == 2 or task_n == 3:
     try:
-            task_n = int(input("##################################################\n"
-                        "Select please task number, that you want to check: \n"
+            task_n = int(input("Select please task number, that you want to check: \n"
                         "\t1. Користувач вводить із клавіатури номер дня тижня (1-7). Необхідно вивести на екран назви дня тижня.\n"
                         "\t2. Користувач вводить два числа. Визначити, чи рівні ці числа, і, якщо ні, вивести їх на екран у порядку зростання\n"
                         "\t3. Користувач вводить два числа та матем дію: + - * або /\n"
@@ -26,43 +25,43 @@ while task_n !=4:
             match task_n:
                 case 1:
                     try:
-                        num_t1 = int(input("Enter please day number per week to show it's name: "))
+                        num_t1 = int(input("Enter please day number pew week to show it's name: "))
 
                         match num_t1:
                             case 1:
-                                print("\tThis is Monday!")
+                                print("This is Monday!")
                             case 2:
-                                print("\tThis is Tuesday!")
+                                print("This is Tuesday!")
                             case 3:
-                                print("\tThis is Wednesday!")
+                                print("This is Wednesday!")
                             case 4:
-                                print("\tThis is Thursday!")
+                                print("This is Thursday!")
                             case 5:
-                                print("\tThis is Friday!")
+                                print("This is Friday!")
                             case 6:
-                                print("\tThis is Saturday!")
+                                print("This is Saturday!")
                             case 7:
-                                print("\tThis is Sunday!")
+                                print("This is Sunday!")
                             case _:
                                 raise Exception("Please enter a valid day number!")
                     except ValueError as e:
-                        print("\tError: Please enter only integers!")
+                        print("Error: Please enter only integers!")
                     except Exception as e:
-                        print(f"\tError: {e}")
+                        print(f"Error: {e}")
                 case 2:
                     try:
                         num1_t2 = float(input("Enter please first number: "))
                         num2_t2 = float(input("Enter please second number: "))
 
                         if num1_t2 == num2_t2:
-                            print("\tNumbers are equal.")
+                            print("Numbers are equal!")
                         else:
                             if num1_t2 > num2_t2:
-                                print(f"\tHere is the bigger number: {num1_t2}. Do what you need with this information, Neo!")
+                                print(f"Here is the bigger number: {num1_t2}. Do what you need with this information, Neo!")
                             else:
-                                print(f"\tHere is the bigger number: {num2_t2}. Do what you need with this information, Neo!")
+                                print(f"Here is the bigger number: {num2_t2}. Do what you need with this information, Neo!")
                     except ValueError as e:
-                        print("\tError: Please enter only numbers!")
+                        print("Error: Please enter only numbers!")
                 case 3:
                     try:
                         num1_t3 = float(input("Enter please first number: "))
@@ -71,27 +70,25 @@ while task_n !=4:
 
                         match action_t3:
                             case "+":
-                                print("\tSum of two numbers: "+ str(num1_t3 + num2_t3))
+                                print("Sum of two numbers: "+ str(num1_t3 + num2_t3))
                             case "-":
-                                print("\tSubtraction of two numbers: " + str(num1_t3 - num2_t3))
+                                print("Subtraction of two numbers: " + str(num1_t3 - num2_t3))
                             case "*":
-                                print("\tMultiplying of two numbers: " + str(num1_t3 * num2_t3))
+                                print("Multiplying of two numbers: " + str(num1_t3 * num2_t3))
                             case "/":
-                                print("\tDividing of two numbers: " + str(num1_t3 / num2_t3))
+                                print("Dividing of two numbers: " + str(num1_t3 / num2_t3))
                             case _:
                                 raise Exception("Please enter a valid action!")
                     except ValueError as e:
-                        print("\tError: Please enter only numbers!")
-                    except ZeroDivisionError as e:
-                        print("\tError: We can't divide by 0.")
+                        print("Error: Please enter only numbers!")
                     except Exception as e:
-                        print(f"\tError: {e}")
+                        print(f"Error: {e}")
                 case 4:
-                    print("\tThanks for your time!")
+                    print("Thanks for your time!")
                     break
                 case _:
                     raise Exception("Please enter a valid task number!")
     except ValueError as e:
-        print("\tError: Please enter only integers!")
+        print("Error: Please enter only integers!")
     except Exception as e:
-        print(f"\tError: {e}")
+        print(f"Error: {e}")
